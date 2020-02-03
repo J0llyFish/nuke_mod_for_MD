@@ -1,0 +1,127 @@
+﻿every_country = {
+	#set_variable = {
+	#	var = missile_short
+	#	value = 1000
+	#}
+	#set_variable = {
+	#	var = missile_middle
+	#	value = 2000
+	#}
+	#set_variable = {
+	#	var = missile_long
+	#	value = 3000
+	#}
+	set_variable = {
+		var = missile_current
+		value = 4000
+	}
+	set_variable = {
+		var = missile_num
+		value = 0
+	}
+	set_variable = {
+		var = bomb_num
+		value = 0
+	}
+}
+	USA = {
+		set_variable = {
+			var = missile_num
+			value = 1600
+		}
+		set_variable = {
+			var = bomb_num
+			value = 6185
+		}
+		#add_nuclear_bombs = 6185
+	}
+	SOV = {
+		set_variable = {
+			var = missile_num
+			value = 1600
+		}
+		set_variable = {
+			var = bomb_num
+			value = 6500
+		}
+		#add_nuclear_bombs = 6200  #I think 6500 exceed maximum
+	}
+	ENG = {
+		set_variable = {
+			var = missile_num
+			value = 120
+		}
+		set_variable = {
+			var = bomb_num
+			value = 215
+		}
+		#add_nuclear_bombs = 215
+	}
+	FRA = {
+		set_variable = {
+			var = missile_num
+			value = 280
+		}
+		set_variable = {
+			var = bomb_num
+			value = 300
+		}
+		#add_nuclear_bombs = 300
+	}
+	CHI = {
+		set_variable = {
+			var = missile_num
+			value = 220
+		}
+		set_variable = {
+			var = bomb_num
+			value = 290
+		}
+		#add_nuclear_bombs = 290
+	}
+	RAJ = {
+		set_variable = {
+			var = missile_num
+			value = 40
+		}
+		set_variable = {
+			var = bomb_num
+			value = 135
+		}
+		#add_nuclear_bombs = 135
+	}
+	PAK = {
+		set_variable = {
+			var = missile_num
+			value = 40
+		}
+		set_variable = {
+			var = bomb_num
+			value = 145
+		}
+		#add_nuclear_bombs = 145
+	}
+	ISR = {
+		set_variable = {
+			var = missile_num
+			value = 0
+		}
+		set_variable = {
+			var = bomb_num
+			value = 80
+		}
+		#add_nuclear_bombs = 80
+	}
+	NKO = {
+		set_variable = {
+			var = missile_num
+			value = 10
+		}
+		set_variable = {
+			var = bomb_num
+			value = 25
+		}
+		#add_nuclear_bombs = 25
+	}
+	
+	

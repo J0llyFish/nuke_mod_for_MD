@@ -1,0 +1,27 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_nuke_background"
+		texturefile = "gfx/interface/nuke_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_nuke_buttom"
+		texturefile = "gfx/interface/nuke_buttom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_nuke_image"
+		texturefile = "gfx/interface/nuke_image.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rocket_1_image"
+		texturefile = "gfx/interface/rocket_1_image.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rocket_2_image"
+		texturefile = "gfx/interface/rocket_2_image.dds"
+	}
+}

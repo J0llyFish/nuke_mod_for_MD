@@ -1,0 +1,5 @@
+﻿l_english:
+ ENTER_BUTT:0 "Click to Enter Strategic Force Command"
+ USING_MRBM:0 "using IRBM(intermediate-range ballistic missile) will not consume ICBM but only has a limited Range(4000km)"
+ USING_ICBM:0 "ICBM(intercontinental ballistic missile) can hit most of target on this earth ,but it's expensive and doesn't has a large amount"
+ USING_NUKE:0 "Launch a Nuclear Strike"

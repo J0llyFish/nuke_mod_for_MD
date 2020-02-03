@@ -1,0 +1,176 @@
+scripted_gui = {
+    my_window1 = {
+        context_type = selected_state_context
+		
+		window_name = "my_window1"
+		
+		visible = {
+		ROOT = {
+			OR = {
+				#has_tech = nukes
+				TAG = USA
+				TAG = SOV
+				TAG = CHI
+				TAG = ENG
+				TAG = FRA
+				
+				TAG = RAJ
+				TAG = NKO
+				TAG = PAK
+				TAG = ISR
+			}
+			has_country_flag = is_nuking
+		}
+		#	TAG = FRA
+		}
+		
+		effects = {
+			button_war_click = {
+				sound_effect = nuke_sfx
+				ROOT = {
+					launch_nuke = {
+						##province = 1092 ##{ any_provinces = yes limit_to_victory_point = yes }
+						state = PREV
+						#province = { any_provinces = yes limit_to_victory_point = yes }
+						use_nuke = no
+					}
+						add_to_variable = {
+							var = bomb_num
+							value = -1
+						}
+					PREV = {
+						controller  = {
+							if = {
+							limit = { AND = { 
+								NOT = { has_war_with = ROOT } 
+								NOT = { tag = ROOT }
+							} }
+								ROOT = {
+									declare_war_on = {
+										target = PREV
+										type = liberate_wargoal 
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = { has_country_flag = ICBM }
+						add_to_variable = {
+							var = missile_num
+							value = -1
+						}
+					}
+				}
+			}
+			
+			button_MRBM_click = {
+				##sound_effect = nuke_sfx
+				ROOT = {
+					clr_country_flag = ICBM
+				}
+			}
+			
+			button_ICBM_click = {
+				##sound_effect = nuke_sfx
+				ROOT = {
+					set_country_flag = ICBM
+				}
+			}
+			
+			button_exit_click = {
+				ROOT = {
+					#sound_effect = confirm_dog
+					clr_country_flag = is_nuking
+				}
+			}
+		}
+        
+		triggers = {
+			button_war_click_enabled = {
+				OR = {
+					AND = {
+					any_state = {
+					#is_capital = yes
+					is_controlled_by = ROOT
+						distance_to = {
+							value < 4000
+							target = PREV
+						}
+						controller = { 
+							#has_war_with = FROM
+						}
+					}
+					ROOT = {
+						check_variable = { bomb_num > 0 }
+						#check_variable = { missile_num > 0 }
+					}
+					}
+				AND = {
+					any_state = {
+					#is_capital = yes
+					is_controlled_by = ROOT
+						distance_to = {
+							value < 10000
+							target = PREV
+						}
+						controller = { 
+							#has_war_with = FROM
+						}
+					}
+					ROOT = { has_country_flag = ICBM }
+					ROOT = {
+						check_variable = { bomb_num > 0 }
+						check_variable = { missile_num > 0 }
+					}
+				}
+				}
+			}
+			
+			button_MRBM_click_enabled = {
+				ROOT = {
+					has_country_flag = ICBM
+					set_variable = {
+						var = missile_current
+						value = 4000
+					}
+				}
+			}
+			
+			button_ICBM_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = ICBM }
+					set_variable = {
+						var = missile_current
+						value = 12000
+					}
+				}
+			}
+		}
+	}
+	
+	my_window2 = {
+        context_type = player_context
+		
+		window_name = "my_window2"
+		
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			button_enter_click = {
+				#sound_effect = confirm_dog
+				if = {
+				limit = { NOT = { has_country_flag = is_nuking } }
+				set_country_flag = is_nuking
+				}
+			}
+		}
+        
+		triggers = {
+			
+		}
+	}
+}
+

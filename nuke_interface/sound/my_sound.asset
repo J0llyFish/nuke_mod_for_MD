@@ -1,0 +1,7 @@
+########################DEBUG #########################
+sound =
+{
+	name = "nuke_sfx"
+	file = "nuke_sfx.wav"
+	always_load = no
+}

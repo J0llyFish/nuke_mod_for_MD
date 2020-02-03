@@ -1,0 +1,22 @@
+"Nuclear Warfare Decisions" = {
+    icon = generic_propaganda
+    available = { 
+	
+    }
+	visible = {
+		OR = {
+			has_country_flag = nuclear_nation
+			TAG = USA
+			TAG = SOV 
+			TAG = ENG
+			TAG = FRA
+			TAG = CHI
+			
+			TAG = RAJ
+			TAG = PAK
+			TAG = ISR
+			TAG = NKO ##DPRK
+			
+		}
+	}
+}

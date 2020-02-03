@@ -1,0 +1,100 @@
+
+guiTypes = {
+	containerWindowType = {
+		name = "my_window1"
+		position = { x = 150 y = 150}	
+		
+		size = { width = 272 height = 272 }
+		
+		moveable = yes
+        
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_nuke_background"
+		}
+		
+		buttonType = {
+            name = "button_war"
+            position = {x = 90 y = 90}
+            spriteType = "GFX_nuke_buttom"
+			clicksound = nuke_sfx
+            frame = 0
+			buttonFont = "hoi_16mbs"
+			buttonText = ""
+			pdx_tooltip = "USING_NUKE"
+        }
+		
+		buttonType = {
+            name = "button_exit"
+            position = {x = 240 y = 0}
+            spriteType = "GFX_NV_btn_close"
+            clicksound = click_close
+            
+			pdx_tooltip = "ROOT_NAME"
+        }
+		
+		buttonType = {
+            name = "button_MRBM"
+            position = {x = 10 y = 30}
+            spriteType = "GFX_rocket_1_image"
+            clicksound = click_close
+            
+			pdx_tooltip = "USING_MRBM"
+        }
+		
+		buttonType = {
+            name = "button_ICBM"
+            position = {x = 10 y = 60}
+            spriteType = "GFX_rocket_2_image"
+            clicksound = click_close
+            
+			pdx_tooltip = "USING_ICBM"
+        }
+		
+    }
+	containerWindowType = {
+		name = "my_window2"
+		position = { x = 1250 y = 0}	
+		
+		size = { width = 200 height = 40 }
+		
+		moveable = no
+        
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_theatre_selection_background"
+		}
+		
+		instantTextBoxType = {
+			name ="text_1"
+			position = { x = 13 y = 8 }
+			font = "hoi_18mbs"
+			text = "Nuke=[?bomb_num]" 	# this scripted localization simply prints the value of the variable named "example1Variable", which is increased by the button_1. 
+															# If your text boxes has a scripted localization in it, it will be populated using the scope of the scripted gui (this example always scopes to player)
+			format = left
+			maxWidth = 120
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name ="text_2"
+			position = { x = 120 y = 8 }
+			font = "hoi_18mbs"
+			text = "ICBM=[?missile_num]" 	# this scripted localization simply prints the value of the variable named "example1Variable", which is increased by the button_1. 
+															# If your text boxes has a scripted localization in it, it will be populated using the scope of the scripted gui (this example always scopes to player)
+			format = left
+			maxWidth = 120
+			maxHeight = 24
+		}
+		
+		buttonType = {
+            name = "button_enter"
+            position = {x = 88 y = 6}
+            spriteType = "GFX_nuke_image"
+            clicksound = click_close
+            
+			pdx_tooltip = "ENTER_BUTT"
+        }
+		
+    }
+}
